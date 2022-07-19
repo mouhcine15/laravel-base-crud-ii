@@ -7,6 +7,8 @@
     <title>Admin Area</title>
 </head>
 <body>
+    @include('admin.partials.header')
+    
     @yield('mainContent')
 </body>
 </html>
