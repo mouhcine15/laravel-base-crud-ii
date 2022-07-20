@@ -1,7 +1,6 @@
 @extends('admin.templates.base')
 
 @section('mainContent')
-    <main>
         <table>
             <thead>
                 <tr>
@@ -24,6 +23,5 @@
                 @endforeach
             </tbody>
         </table>
-    </main>
-    
+
 @endsection

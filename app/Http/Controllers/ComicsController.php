@@ -45,6 +45,9 @@ class ComicsController extends Controller
         $comic->prezzo = $formData['prezzo'];
 
         $comic->save();
+
+        // return redirect()->route('admin.comics.index');
+        return redirect()->route('comics.show', ['comic' => $comic]);
     }
 
     /**
@@ -53,9 +56,9 @@ class ComicsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
-        $comic = Comic::findOrFail($id);
+        // $comic = Comic::findOrFail($id);
         return view('admin.comics.show', compact('comic'));
     }
 
